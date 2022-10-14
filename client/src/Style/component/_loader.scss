@@ -1,0 +1,14 @@
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include Flex;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    font-weight: 300;
+    color: darkblue;
+}

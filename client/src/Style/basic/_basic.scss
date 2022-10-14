@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+*,*::before, *::after{
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    font-family: $primary-font;
+    font-weight: 300;
+}
+
+html{
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}

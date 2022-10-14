@@ -1,0 +1,22 @@
+
+.projects{
+    min-height: 100vh;
+    padding: 3vmax;
+
+    h2{
+        text-align: center;
+        font-family: $secondary-font;
+        padding: 2rem 0;
+        @include Flex;
+        gap: 1rem;
+    }
+
+    &-wrapper{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+}

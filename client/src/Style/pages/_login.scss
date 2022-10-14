@@ -1,0 +1,98 @@
+
+.login{
+    height: 100vh;
+    background: hsl(219, 48%, 8%);
+    @include Flex;
+
+    &-container{
+        width: 60%;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0,0,0, .336);
+        background-color: white;
+
+        @include Responsive(large){
+            width: 85%;
+        }
+
+        @include Responsive(mobile){
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+
+    &-form{
+        background: inherit;
+        height: 75vh;
+        padding: 2vmax;
+        border-radius: 5px;
+
+        h4{
+            display: flex;
+            letter-spacing: 15px;
+            margin: 2vmax;
+            justify-content: center;
+            transform: translateX(-100vw);
+            animation: formAnim 1s ease forwards;
+
+            p{
+                transition: all .3s;
+                cursor: default;
+
+                &:hover{
+                    transform: translateY(-10px);
+                }
+            }
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            padding: 2vmax 8vmax;
+            box-sizing: border-box;
+            justify-content: center;
+
+            @include Responsive(mobile){
+                padding: 2vw 4vw;
+            }
+
+            input{
+                padding: 1vmax 2vmax;
+                margin: 1vmax;
+                border: 1px solid rgba(0,0,0, .2);
+                border-radius: 30px;
+                font: 100 1rem;
+                transform: translateX(-100vw);
+                animation: formAnim 1s ease-in-out forwards .6s;
+
+                @include Responsive(mobile){
+                    padding: 3vw 4vw;
+                }
+            }
+
+            button{
+                @include Flex;
+                padding: 1vmax 2vmax;
+                margin: 1vmax;
+                border-radius: 40px;
+                background: hsl(250, 100%, 70%);
+                transform: translateY(-100vh);
+                transition: all .6s;
+                color: white;
+                gap: 1rem;
+                font-size: 1.2rem;
+                box-shadow: 0 0 10px rgba(0,0,0, .5);
+                animation: btnAnim 1s ease-in-out forwards 1.1s;
+
+               
+                @include Responsive(mobile){
+                  padding: 2vw 4vw;
+                }
+                
+
+                &:hover{
+                    background: hsl(219, 48%, 8%);
+                }
+            }
+        }
+    }
+}

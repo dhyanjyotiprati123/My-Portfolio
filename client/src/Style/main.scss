@@ -1,0 +1,24 @@
+
+@import "./abstract/mixin";
+@import "./abstract/variables";
+
+@import "./basic/basic";
+
+@import "./component/header";
+@import "./component/pcard";
+@import "./component/footer";
+@import "./component/sidebar";
+@import "./component/skillcard";
+@import "./component/loader";
+@import "./component/timelinecard";
+
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/projects";
+@import "./pages/login";
+@import "./pages/admin";
+@import "./pages/newProject";
+@import "./pages/timeline";
+@import "./pages/project";
+@import "./pages/timelines";

@@ -1,0 +1,62 @@
+
+.timeline{
+    height: 100vh;
+    background: rgb(206, 252, 214);
+    @include Flex;
+    box-sizing: border-box;
+
+    &-wrapper{
+        width: 60%;
+        height: 70vh;
+        border: 1px dashed grey;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    &-heading{
+        font-size: 3rem;
+        font-weight: 300;
+        text-align: center;
+    }
+    &-content{
+        padding: 2rem 1rem 1rem 1rem;
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 60vh;
+            
+
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            input{
+                padding: 1rem 2rem;
+                border: 1px solid rgba(0,0,0, .6);
+                border-radius: 3rem;
+                font-size: 1.2rem;
+                outline: none;
+
+                &::placeholder{
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: darkblue;
+                }
+            }
+
+            button{
+                border: none;
+                outline: none;
+                padding: 1rem 2rem;
+                border-radius: 3rem;
+                font-size: 1.2rem;
+                background: rgb(20, 73, 250);
+                color: white;
+
+            }
+        }
+    }
+}

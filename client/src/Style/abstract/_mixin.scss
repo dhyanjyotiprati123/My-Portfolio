@@ -1,0 +1,25 @@
+
+@mixin Flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin Responsive($breakpoint) {
+    @if $breakpoint == large {
+        @media screen and (max-width: 1024px) {
+            @content
+        }
+    };
+    
+    @if $breakpoint == mobile{
+        @media screen and(max-width: 600px){
+            @content
+        }
+    };
+    @if $breakpoint == sm {
+        @media screen and(max-width: 400px) {
+            @content
+        }
+    }
+}

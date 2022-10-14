@@ -1,0 +1,107 @@
+
+.contact{
+    height: 100vh;
+    background: hsl(219, 48%, 8%);
+    position: relative;
+
+    &-rightBar{
+        background: linear-gradient(to bottom, hsl(250, 100%, 75%), white);
+        position: absolute;
+        right: 0;
+        width: 30%;
+        height: inherit;
+        animation: rightBarAnim 1s linear forwards;
+    }
+
+    &-container{
+        position: absolute;
+        left: 0;
+        background: white;
+        border-radius: 100px 0 0 100px;
+        height: 80vh;
+        width: 70%;
+        box-shadow: 0 0 20px rgba(0,0,0, .5);
+        top: 50%;
+        transform: translate(20%, -50%);
+        @include Flex;
+        animation: containerAnim 1s linear forwards;
+
+        @include Responsive(mobile){
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+    &-form{
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 60%;
+
+        @include Responsive(mobile){
+            width: 100%;
+            padding: 1rem;
+        }
+        
+       button{
+        @include Flex;
+        gap: 1rem;
+        background-color: hsl(250, 100%, 70%);
+        transform: translateY(-100vh);
+        animation: btnAnim 1s ease-in-out forwards 1s;
+       }
+        
+
+        h4{
+            text-align: center
+        }
+    }
+
+
+    &-input,&-area{
+        outline: none;
+        border-radius: 3px;
+        padding: 1vmax;
+        font-size: 1rem;
+        border: 1px solid rgba(0,0,0, .205);
+        transform: translateX(-100vw);
+        animation: formAnim 1s ease-in-out forwards 0.5s;
+    }
+}
+
+@keyframes containerAnim {
+    from{
+        transform: translate(-100%, -50%);
+    }
+    to{
+        transform: translate(20%, -50%);
+    }
+}
+
+@keyframes rightBarAnim {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes formAnim {
+    from{
+        transform: translateX(-100vw);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes btnAnim {
+    from{
+        transform: translateY(-100vw);
+    }
+    to{
+        transform: translateY(0);
+    }
+}

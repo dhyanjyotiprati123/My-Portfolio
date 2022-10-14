@@ -1,0 +1,55 @@
+
+.admin{
+    width: 100%;
+    min-height: 100vh;
+
+    &-container{
+        display: flex;
+    }
+    &-side{
+        flex: 3;
+    }
+    &-right{
+        flex: 9;
+        padding: 3rem;
+    }
+    &-form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    &-input{
+        border: 1px solid darkblue;
+        outline: none;
+        padding: 10px 15px;
+        border-radius: 20px;
+        width: 50%;
+    }
+    &-editAvatar{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        label{
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+    }
+    &-btn{
+        border: none;
+        outline: none;
+        padding: 1rem 2rem;
+        @include Flex;
+        font-size: 1.2rem;
+        background: rgb(82, 113, 249);
+        color: darkblue;
+        min-width: 200px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    &-skills{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+}

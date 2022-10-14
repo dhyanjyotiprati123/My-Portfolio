@@ -1,0 +1,43 @@
+
+.tcard{
+    width: 400px;
+    height: 300px;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: linear-gradient(145deg, #b1b1b1, #ffffff);
+    box-shadow:  29px 29px 79px #969696,
+             -29px -29px 79px #ffffff;
+
+    h1{
+        font-size: 2.5rem;
+        font-weight: 300;
+        font-family: $logo-font;
+    }
+    h2{
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: $secondary-font;
+    }
+    h3{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(250, 88, 88, .6);
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        background: linear-gradient(145deg, #e64f4f, #ff5e5e);          
+    }
+}

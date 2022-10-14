@@ -1,0 +1,277 @@
+
+.home{
+
+    &-canvas{
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        filter: blur(10px);
+        position: absolute;
+    }
+
+    &-canvasContainer{
+        background: rgba(0,0,0, 0.048);
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        height: 100vh;
+        color: white;
+        display: flex;
+
+        h1{
+            filter: drop-shadow(0 0 2px rgb(28,116,216));
+            position: absolute;
+            top: 50%;
+            left: 0;
+            background-color: white;
+            padding: 2vmax 3vmax;
+            transform: translate(0, -50%);
+            text-align: center;
+            font: 700 4vmax $secondary-font;
+        }
+
+        p{
+            transition: all .5s;
+            color: rgb(36, 36, 36);
+            cursor: pointer;
+            &:hover{
+                transform: translateY(-10px);
+            }
+        }
+    }
+
+    &-canvasBox{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0 , -50%);
+        text-align: right;
+
+        h2{
+            font: 900 4rem $primary-font;
+            letter-spacing: 22px;
+            line-height: 130px;
+        }
+    }
+
+    &-canvasLink{
+        text-decoration: none;
+        padding: 1.2rem 2rem;
+        color: black;
+        background: rgba(255,255,255, .7);
+        @include Flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: inherit;
+        cursor: pointer;
+        border: 1px solid white;
+        transition: all .3s ease;
+
+        &:hover{
+            background: transparent;
+            color: rgb(255, 95, 16);
+        }
+    }
+
+    &-scrollBtn{
+        @include Flex;
+        position: absolute;
+        left: 50%;
+        border-radius: 100%;
+        transform: translateY(-150%);
+        padding: .5vmax;
+        animation: scrollPop 0.5s ease-in infinite alternate;
+
+        &>svg{
+            font-size: 3vmax;
+            color: white;
+        }
+    }
+
+    &-container{
+        
+        h3{
+            text-align: center;
+            color: rgba(22, 20, 20 , .9);
+            padding: 2rem;
+        }
+
+        background: white;
+        padding-top: 4vmax;
+        border-radius: 0 0 200px 200px;
+        border-bottom: 200px solid white;
+        position: relative;
+        z-index: 1;
+    }
+
+    &-skills{
+
+        h3{
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        box-sizing: border-box;
+        padding: 10rem;
+        padding-bottom: 0;
+        height: 1500px;
+        position: relative;
+        background-color: hsl(219, 48%, 8%);
+        perspective: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow-x: hidden;
+        transform: translateY(-200px);
+        margin-bottom: -200px;
+
+        &-cube{
+            width: 200px;
+            height: 200px;
+            animation: cubeRotation 15s linear infinite alternate;
+            transform-style: preserve-3d;
+        }
+    
+        &-faces{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            box-shadow: 0 0 10px rgb(0,0,0);
+            background-color: white;
+            opacity: .7;
+
+            img{
+                width: inherit;
+                height: inherit;
+            }
+        }
+
+        &-faces1{
+            transform: translate3d(0,0, 150px);
+        }
+        &-faces2{
+            transform: rotateY(180deg) translate3d(0,0, 150px);
+        }
+        &-faces3{
+            transform: rotateY(-90deg) translate3d(0,0, 150px);
+        }
+        &-faces4{
+            transform: rotateY(90deg) translate3d(0,0, 150px);
+        }
+        &-faces5{
+            transform: rotateX(90deg) translate3d(0,0, 150px);
+        }
+        &-faces6{
+            transform: rotateX(-90deg) translate3d(0,0, 150px);
+        }
+    }
+
+    &-cubeShadow{
+        width: 300px;
+        height: 40px;
+        background-color: rgba(255,255,255, 0.171);
+        border-radius: 50%;
+        animation: cubeShadow 1s ease-in-out infinite alternate;
+        filter: blur(10px);
+        opacity: .7;
+    }
+
+    &-icons{
+       position: absolute;
+       right: -300px;
+       top: 50%;
+       transform: translate(0, -50%);
+       background: hsl(250, 100%, 75%);
+       display: flex;
+       flex-direction: column;
+       padding: 2rem; 
+       animation-duration: 2s;
+       animation-timing-function: linear;
+       animation-fill-mode: forwards;
+
+       &>svg{
+        font-size: 4rem;
+        transition: all .3s ease-in;
+        color: white;
+        margin: 10px;
+
+        &:hover{
+            transform: scale(1.3);
+        }
+       }
+    }
+
+    &-projects{
+        h3{
+            text-align: center;
+        }
+
+        background: white;
+        border-radius: 200px 200px 0 0;
+        position: relative;
+        padding: 4vmax 0 0 0;
+        transform: translateY(-200px);
+        margin-bottom: -200px;
+        
+
+        &-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2vmax;
+            width: 85%;
+            margin: 0 auto;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+    }
+
+   
+
+}
+
+@keyframes cubeRotation {
+    to{
+        transform: rotateY(360deg) rotateX(480deg) rotateZ(720deg);
+    }
+}
+
+@keyframes cubeShadow {
+    to{
+        transform: scale(1.2) translateY(-10px);
+    }
+}
+
+@keyframes iconAnimationOn{
+    from{
+        right: -300px;
+    }
+    to{
+        right: 40px;
+    }
+}
+
+@keyframes iconAnmationOff{
+    from{
+        right: 40px;
+    }
+    to{
+        right: -300px;
+    }
+}
+
+@keyframes scrollPop {
+    to{
+        transform: translateY(-200%);
+    }
+}
+
